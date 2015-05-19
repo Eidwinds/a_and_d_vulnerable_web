@@ -1,0 +1,307 @@
+@import "compass";
+@import "compass/reset/";
+
+$font-color: #333;
+$error-font-color: #f33;
+$main-font-size: 18px;
+$title-font-size: 30px;
+$main-width: 90%;
+
+body{
+  color: $font-color;
+  font-size: $main-font-size;
+}
+
+a{
+  text-decoration: none;
+  color: $font-color;
+}
+
+a:hover{
+  opacity: 0.6;
+}
+
+header{
+  @include clearfix;
+  img{
+    float: left;
+  }
+
+  li{
+    float: left;
+    width: 150px;
+    height: 100px;
+    font-size: 20px;
+    line-height: 100px;
+    text-align: center;
+  }
+}
+
+.container{
+  width: $main-width;
+  margin: 10px auto;
+}
+
+section{
+  padding: 20px 20px;
+}
+
+h1{
+  font-size: $title-font-size;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+footer{
+  margin-top: 30px;
+  text-align: center;
+  p{
+    padding: 5px;
+    border-top: solid $font-color 1px;
+    border-bottom: solid $font-color 1px;
+  }
+}
+
+button{
+  cursor: pointer;
+  display: block;
+}
+
+button:hover{
+  opacity: 0.8;
+}
+
+.normal-button{
+  display: block;
+  text-align: center;
+  border: dotted $font-color 1px;
+  color: $font-color;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.logout{
+  padding-top: 35px;
+  height: 65px;
+  float: right;
+  margin-right: 30px;
+}
+
+label{
+  display: block;
+  float: left;
+  width: 150px;
+  height: 30px;
+  line-height: 20px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+input{
+  color: $font-color;
+}
+
+select{
+  color: $font-color;
+}
+
+textarea{
+  color: $font-color;
+}
+
+.normal-form{
+  width: 500px;
+  margin: 0 auto;
+}
+
+.center{
+  margin: 0 auto;
+}
+
+.error{
+  text-align: center;
+  color: $error-font-color;
+  padding: 10px;
+}
+
+.create_button{
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  border: dotted $font-color 1px;
+  width: 150px;
+  height: 30px;
+  float: right;
+  line-height: 30px;
+  @include clearfix;
+}
+
+.normal-table{
+  margin: 0 auto;
+  th{
+    border: dotted $font-color 1px;
+    width: 200px;
+    font-size: 20px;
+    padding: 5px;
+  }
+  td{
+    border: dotted $font-color 1px;
+    padding: 5px;
+  }
+  .small{
+    width: 50px;
+  }
+  .middle{
+    width: 50px;
+  }
+}
+
+.normal-textarea{
+  width: 300px;
+  height: 300px;
+}
+
+.center{
+  text-align: center;
+}
+
+h2{
+  font-size: $title-font-size;
+}
+
+.role{
+  div{
+    border: dotted $font-color 1px;
+    padding: 5px;
+  }
+  width: 48%;
+  float: left;
+}
+
+.topic{
+  div{
+    border: dotted $font-color 1px;
+    padding: 5px;
+  }
+  width: 48%;
+  float: right;
+}
+
+section{
+  @include clearfix;
+}
+
+.content_box{
+  border: dotted $font-color 1px;
+  padding: 5px;
+  width: 90%;
+}
+
+.topic_list{
+  text-align: center;
+
+  li{
+    height: 30px;
+  }
+}
+
+.pagination{
+  @include clearfix;
+  margin: 20px auto 0 auto;
+  text-align: center;
+  display: table;
+  li{
+    width: 20px;
+    display: block;
+    float: left;
+  }
+}
+
+.header_user{
+  font-size: 14px;
+  float: right;
+  width: 300px;
+  text-align: right;
+  margin-right: 50px;
+}
+
+.success{
+  background-color: #550;
+}
+
+.big-chart{
+  h3{
+    font-size: 20px;
+    text-align: center;
+  }
+  width: 800px;
+  margin: 20px auto;
+}
+
+.clock{
+  width: 800px;
+  margin: 20px auto;
+  text-align: center;
+  div{
+    @include clearfix;
+    div,p{
+      float: left;
+    }
+
+    p{
+      line-height: 20px;
+      padding: 5px;
+      height: 20px;
+    }
+
+    .total{
+      width: 600px;
+      height: 30px;
+      background-color: #333;
+      .now{
+        background-color: $font-color;
+        height: 30px;
+      }
+    }
+  }
+}
+
+.charts{
+  width: 800px;
+  margin: 0 auto;
+  @include clearfix;
+
+  h2{
+    text-align: center;
+  }
+}
+
+.small-chart{
+  h3{
+    font-size: 20px;
+    text-align: center;
+  }
+  width: 300px;
+  margin: 10px 50px;
+  float: left;
+}
+
+.status{
+  width: 300px;
+  height: 20px;
+  background-color: #333;
+  .now{
+    background-color: $font-color;
+    height: 20px;
+  }
+}
+
+.our_data{
+  width: 800px;
+  margin: 20px auto;
+  @include clearfix;
+  h2{
+    text-align: center;
+  }
+}
