@@ -26,4 +26,23 @@ class Controller_Admin_Api extends Controller_Rest
 			$topic->safeDelete();
 		}
 	}
+
+	public function post_deleteuser()
+	{
+
+		$user = Model_User::find((int)Input::post("id"), [
+			"where" => [
+				["deleted_at", 0]
+			]
+		]);
+
+		if($user == null)
+		{
+			$this->response->set_status(400);
+		}
+		else
+		{
+			$user->safeDelete();
+		}
+	}
 }

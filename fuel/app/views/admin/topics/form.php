@@ -8,5 +8,5 @@
 		<label for="body">本文:</label>
 		<textarea class="normal-textarea" required="" name="body" id="body"><?php if(isset($body)) echo $body; ?></textarea>
 	</fieldset>
-	<button type="submit" class="normal-button center">Submit</button>
+	<button type="submit" class="normal-button center">確定</button>
 </form>

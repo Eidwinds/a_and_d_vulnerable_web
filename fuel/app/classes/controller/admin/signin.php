@@ -28,6 +28,7 @@ class Controller_Admin_Signin extends Controller_Base
 			else
 			{
 				$user->login_hash = sha1($email.time());
+				$user->last_login = time();
 				$user->save();
 
 				Cookie::set("ad", $user->login_hash);

@@ -53,4 +53,39 @@ class Model_User extends \Orm\Model
 
 	protected static $_table_name = 'users';
 
+	public function getGroup()
+	{
+		if((int)$this->group_id === 100)
+		{
+			return "管理者";
+		}
+		else
+		{
+			return "ユーザ";
+		}
+	}
+
+	public static function checkEmail($email)
+	{
+		$users = Model_User::find("all", [
+			"where" => [
+				["email", $email]
+			]
+		]);
+		if($users == null)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	public function safeDelete()
+	{
+		$this->email = md5($this->email . time());
+		$this->deleted_at = time();
+		$this->save();
+	}
 }
