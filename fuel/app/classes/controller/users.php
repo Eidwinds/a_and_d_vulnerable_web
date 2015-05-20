@@ -47,7 +47,7 @@ class Controller_Users extends Controller_Base
 	}
 	public function action_company()
 	{
-		$this->template->title = '会社情報';
+		$this->template->title = '会社概要';
 		$this->template->content = View::forge('company', $this->data);
 	}
 }
