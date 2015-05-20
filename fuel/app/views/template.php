@@ -13,6 +13,7 @@
 			<ul>
 				<li><a href="/topics">お知らせ一覧</a></li>
 				<li><a href="/items">商品一覧</a></li>
+				<li><a href="/cart">カート</a></li>
 				<?php if($is_signin): ?>
 				<li><a href="/purchases">購入履歴</a></li>
 				<li class="logout">

@@ -150,7 +150,7 @@ textarea{
 }
 
 .normal-table{
-  margin: 0 auto;
+  margin: 20px auto;
   th{
     border: dotted $font-color 1px;
     width: 200px;
@@ -315,5 +315,18 @@ h3{
   @include clearfix;
   input,button{
     float: right;
+  }
+}
+
+.prof_table{
+  width: 300px;
+  margin: 20px auto;
+  th{
+    width: 100px;
+  }
+
+  th,td{
+    padding: 10px;
+    border: solid 1px #ccc;
   }
 }

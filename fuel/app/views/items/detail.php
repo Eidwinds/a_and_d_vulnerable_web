@@ -31,7 +31,7 @@
 		}
 		items.push(id.toString());
 		items = $.unique(items);
-		$.cookie("cart", items.join(","));
+		$.cookie("cart", items.join(","), { path: "/" });
 		$("#cart_button").text("カートに入っています");
 		$("#cart_button").prop("disabled", true);
 	}

@@ -11,5 +11,6 @@
 		<label for="password">Password:</label>
 		<input type="password" required="" name="password" id="password">
 	</fieldset>
+	<p class="center"><a href="/signup">ユーザ登録はこちら</a></p>
 	<button type="submit" class="normal-button center">ログイン</button>
 </form>
