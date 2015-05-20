@@ -31,7 +31,28 @@ class Controller_Users extends Controller_Base
 
 	public function action_index()
 	{
-		$this->template->title = 'Top';
+		$this->data["topics"] = Model_Topic::find("all", [
+			"where" => [
+				["deleted_at", 0],
+			],
+			"order_by" => [
+				["id", "desc"]
+			],
+			"limit" => 5
+		]);
+
+		$this->data["items"] = Model_Item::find("all", [
+			"where" => [
+				["deleted_at", 0]
+			],
+			"order_by" => [
+				["id", "desc"]
+			],
+			"limit" => 5
+		]);
+
+
+		$this->template->title = 'トップページ';
 		$this->template->content = View::forge('index', $this->data);
 	}
 

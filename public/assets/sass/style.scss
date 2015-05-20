@@ -258,3 +258,16 @@ h3{
     border: solid 1px #ccc;
   }
 }
+
+.item_list{
+  width: 800px;
+  text-align: center;
+  margin: 20px auto;
+  li{
+    img{
+
+    }
+    float: left;
+    width: 200px;
+  }
+}
