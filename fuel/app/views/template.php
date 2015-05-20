@@ -8,7 +8,7 @@
 <body>
 <div class="container">
 	<header>
-		<?= Asset::img('s_ad.png', ["width" => 100, "height" => 100, "alt" => "a_and_d"]); ?>
+		<a href="/"><?= Asset::img('s_ad.png', ["width" => 100, "height" => 100, "alt" => "a_and_d"]); ?></a>
 		<?php if($is_signin): ?>
 			<ul>
 				<li><a href="/admin">ダッシュボード</a></li>
