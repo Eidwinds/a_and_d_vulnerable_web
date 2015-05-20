@@ -55,11 +55,10 @@ h1{
 footer{
   margin-top: 30px;
   text-align: center;
-  p{
-    padding: 5px;
-    border-top: solid $font-color 1px;
-    border-bottom: solid $font-color 1px;
-  }
+  border-top: solid $font-color 1px;
+  border-bottom: solid $font-color 1px;
+
+  padding: 5px;
 }
 
 button{
@@ -220,4 +219,28 @@ section{
 h3{
   text-align: center;
   margin: 25px auto 10px auto;
+}
+
+.policy{
+  width: 800px;
+  margin: 20px auto;
+
+  .over{
+    margin-top: 30px;
+    text-align: right;
+  }
+}
+
+.company{
+  width: 500px;
+  margin: 0 auto;
+
+  tr{
+    height: 30px;
+  }
+
+  td,th{
+    padding: 10px;
+    border: solid 1px #ccc;
+  }
 }

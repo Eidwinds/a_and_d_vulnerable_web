@@ -6,40 +6,35 @@
 	<?= Asset::css('style.css'); ?>
 </head>
 <body>
-	<div class="container">
-		<header>
-			<?= Asset::img('s_ad.png', ["width" => 100, "height" => 100, "alt" => "a_and_d"]); ?>
-			<?php if($is_signin): ?>
+<div class="container">
+	<header>
+		<?= Asset::img('s_ad.png', ["width" => 100, "height" => 100, "alt" => "a_and_d"]); ?>
+		<?php if($is_signin): ?>
 			<ul>
-				<li><a href="/patrash">Top</a></li>
-				<li><a href="/patrash/teams">Teams</a></li>
-				<li><a href="/patrash/users">Users</a></li>
-				<li><a href="/patrash/topics">Topics</a></li>
-				<li><a href="/patrash/roles">Roles</a></li>
-				<li><a href="/patrash/defenses">Defense</a></li>
-				<li><a href="/patrash/defensetypes">Def Types</a></li>
-				<li><a href="/patrash/attacks">Attack</a></li>
-				<li><a href="/patrash/attacktypes">Atk Types</a></li>
-				<li><a href="/patrash/attacklog">Atk Log</a></li>
-				<li><a href="/patrash/loginlog">Login Log</a></li>
-				<li><a href="/patrash/setting">Setting</a></li>
+				<li><a href="/admin">ダッシュボード</a></li>
+				<li><a href="/admin/topics">お知らせ</a></li>
+				<li><a href="/admin/users">ユーザ</a></li>
+				<li><a href="/admin/items">商品</a></li>
+				<li><a href="/admin/purchases">購入履歴</a></li>
+				<li><a href="/admin/inquiries">お問い合わせ</a></li>
 				<li class="logout">
 					<form action="" method="post">
 						<input type="hidden" name="logout" value="1">
 						<?= Form::csrf(); ?>
-						<button class="normal-button">Logout</button>
+						<button class="normal-button">ログアウト</button>
 					</form>
 				</li>
 			</ul>
-			<?php endif; ?>
-		</header>
-		<section>
-			<h1><?= $title; ?></h1>
-<?= $content; ?>
-		</section>
-		<footer>
-			<p>Created by Yuichi HATTORI</p>
-		</footer>
-	</div>
+		<?php endif; ?>
+	</header>
+	<section>
+		<h1><?= $title; ?></h1>
+		<?= $content; ?>
+	</section>
+	<footer>
+		<div><a href="/policy">プライバシーポリシー</a> | <a href="/role">利用規約</a> | <a href="/company">会社概要</a> | <a href="/inquiry">お問い合わせ</a></div>
+		<p>Copyright 2015 Attack and Defense All rights reserved.</p>
+	</footer>
+</div>
 </body>
 </html>

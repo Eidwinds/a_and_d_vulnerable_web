@@ -1,0 +1,30 @@
+<table class="company">
+	<tr>
+		<th>会社名</th>
+		<td>○○</td>
+	</tr>
+	<tr>
+		<th>所在地</th>
+		<td>地球上のどこか</td>
+	</tr>
+	<tr>
+		<th>設立</th>
+		<td>1800年5月</td>
+	</tr>
+	<tr>
+		<th>役員</th>
+		<td>代表取締役社長　○○</td>
+	</tr>
+	<tr>
+		<th>事業内容</th>
+		<td>○○の販売</td>
+	</tr>
+	<tr>
+		<th>従業員数</th>
+		<td>120名</td>
+	</tr>
+	<tr>
+		<th>取引銀行</th>
+		<td>○○銀行</td>
+	</tr>
+</table>
