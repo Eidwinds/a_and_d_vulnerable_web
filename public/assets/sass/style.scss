@@ -271,3 +271,42 @@ h3{
     width: 200px;
   }
 }
+
+.item_box{
+  width: 800px;
+  margin: 20px auto;
+  img{
+    float: left;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  table{
+    margin: 0 auto;
+    tr,td{
+      border: solid 1px #ccc;
+      padding: 10px;
+    }
+
+    tr{
+      width: 100px;
+    }
+
+    td{
+      width: 200px;
+    }
+  }
+
+  p{
+    clear: both;
+    border: solid 1px #ccc;
+    padding: 20px;
+    margin: 20px auto;
+  }
+}
+
+.big-button{
+  width: 300px;
+  margin: 20px auto;
+  font-size: 30px;
+}

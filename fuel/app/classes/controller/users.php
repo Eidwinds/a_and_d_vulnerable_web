@@ -43,7 +43,8 @@ class Controller_Users extends Controller_Base
 
 		$this->data["items"] = Model_Item::find("all", [
 			"where" => [
-				["deleted_at", 0]
+				["deleted_at", 0],
+				["is_public", 1],
 			],
 			"order_by" => [
 				["id", "desc"]
