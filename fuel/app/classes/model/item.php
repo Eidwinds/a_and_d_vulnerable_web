@@ -34,4 +34,9 @@ class Model_Item extends \Orm\Model
 
 	protected static $_table_name = 'items';
 
+	public function safeDelete()
+	{
+		$this->deleted_at = time();
+		$this->save();
+	}
 }

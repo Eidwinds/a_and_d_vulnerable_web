@@ -52,7 +52,7 @@
 
 	function changePublic(id){
 		$.ajax({
-			url: '/patrash/api/changeitem.json',
+			url: '/admin/api/changeitem.json',
 			type: 'POST',
 			data: {
 				"id": id,
