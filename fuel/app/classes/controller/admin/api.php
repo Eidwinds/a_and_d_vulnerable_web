@@ -91,4 +91,23 @@ class Controller_Admin_Api extends Controller_Rest
 			$item->save();
 		}
 	}
+
+	public function post_deleteinquiry()
+	{
+
+		$inquiry = Model_Inquiry::find((int)Input::post("id"), [
+			"where" => [
+				["deleted_at", 0]
+			]
+		]);
+
+		if($inquiry == null)
+		{
+			$this->response->set_status(400);
+		}
+		else
+		{
+			$inquiry->safeDelete();
+		}
+	}
 }

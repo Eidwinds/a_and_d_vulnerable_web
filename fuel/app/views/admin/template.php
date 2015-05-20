@@ -16,7 +16,7 @@
 				<li><a href="/admin/users">ユーザ</a></li>
 				<li><a href="/admin/items">商品</a></li>
 				<li><a href="/admin/roles">購入履歴</a></li>
-				<li><a href="/admin/inquiry">お問い合わせ</a></li>
+				<li><a href="/admin/inquiries">お問い合わせ</a></li>
 				<li class="logout">
 					<form action="" method="post">
 						<input type="hidden" name="logout" value="1">
