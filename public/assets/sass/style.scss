@@ -310,3 +310,10 @@ h3{
   margin: 20px auto;
   font-size: 30px;
 }
+
+.search{
+  @include clearfix;
+  input,button{
+    float: right;
+  }
+}

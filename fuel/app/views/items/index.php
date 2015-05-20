@@ -1,6 +1,6 @@
-<form method="get">
-	<input name="search" value="<?php if(isset($_GET["search"])) echo $_GET["search"]; ?>">
+<form class="search" method="get">
 	<button type="submit">検索</button>
+	<input name="search" value="<?php if(isset($_GET["search"])) echo $_GET["search"]; ?>">
 </form>
 <div>
 	<ul class="item_list">
