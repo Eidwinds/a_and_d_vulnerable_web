@@ -73,12 +73,25 @@ button:hover{
 .normal-button{
   display: block;
   text-align: center;
-  border: dotted $font-color 1px;
+  border: solid $font-color 1px;
   color: $font-color;
   width: 100px;
   height: 30px;
   line-height: 30px;
+  border-radius: 10px;
 }
+
+.radius-button{
+  display: block;
+  text-align: center;
+  border: solid $font-color 1px;
+  color: $font-color;
+  width: 150px;
+  border-radius: 10px;
+  height: 30px;
+  line-height: 30px;
+}
+
 
 .logout{
   padding-top: 35px;

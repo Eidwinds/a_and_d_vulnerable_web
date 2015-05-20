@@ -26,6 +26,13 @@
 						<button class="normal-button">ログアウト</button>
 					</form>
 				</li>
+				<?php else: ?>
+					<li class="logout">
+						<a href="/signin" class="radius-button">ログイン</a>
+					</li>
+					<li class="logout">
+						<a href="/signup" class="radius-button">ユーザ登録</a>
+					</li>
 				<?php endif; ?>
 			</ul>
 
