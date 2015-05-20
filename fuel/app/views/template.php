@@ -9,8 +9,10 @@
 <div class="container">
 	<header>
 		<a href="/"><?= Asset::img('s_ad.png', ["width" => 100, "height" => 100, "alt" => "a_and_d"]); ?></a>
-		<?php if($is_signin): ?>
+
 			<ul>
+				<li><a href="/topics">お知らせ一覧</a></li>
+				<?php if($is_signin): ?>
 				<li><a href="/admin">ダッシュボード</a></li>
 				<li><a href="/admin/topics">お知らせ</a></li>
 				<li><a href="/admin/users">ユーザ</a></li>
@@ -24,8 +26,9 @@
 						<button class="normal-button">ログアウト</button>
 					</form>
 				</li>
+				<?php endif; ?>
 			</ul>
-		<?php endif; ?>
+
 	</header>
 	<section>
 		<h1><?= $title; ?></h1>
