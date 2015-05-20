@@ -31,3 +31,5 @@ desktop.ini
 /fuel/app/config/crypt.php
 
 /.sass-cache
+
+/public/assets/img/*
