@@ -36,7 +36,27 @@ class Controller_Admin extends Controller_Base
 
 	public function action_index()
 	{
-		$this->template->title = 'Admin';
-		$this->template->content = View::forge('admin/index');
+
+		$this->data["purchases"] = Model_Purchase::find("all", [
+			"order_by" => [
+				["id", "desc"]
+			],
+			"limit" => 5
+
+		]);
+
+		$this->data["inquiries"] = Model_Inquiry::find("all", [
+			"where" => [
+				["deleted_at", 0]
+			],
+			"order_by" => [
+				["id", "desc"]
+			],
+			"limit" => 5
+
+		]);
+
+		$this->template->title = 'ダッシュボード';
+		$this->template->content = View::forge('admin/index', $this->data);
 	}
 }

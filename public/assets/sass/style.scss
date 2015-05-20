@@ -170,15 +170,6 @@ h2{
   font-size: $title-font-size;
 }
 
-.role{
-  div{
-    border: dotted $font-color 1px;
-    padding: 5px;
-  }
-  width: 48%;
-  float: left;
-}
-
 .topic{
   div{
     border: dotted $font-color 1px;
@@ -226,82 +217,7 @@ section{
   margin-right: 50px;
 }
 
-.success{
-  background-color: #550;
-}
-
-.big-chart{
-  h3{
-    font-size: 20px;
-    text-align: center;
-  }
-  width: 800px;
-  margin: 20px auto;
-}
-
-.clock{
-  width: 800px;
-  margin: 20px auto;
+h3{
   text-align: center;
-  div{
-    @include clearfix;
-    div,p{
-      float: left;
-    }
-
-    p{
-      line-height: 20px;
-      padding: 5px;
-      height: 20px;
-    }
-
-    .total{
-      width: 600px;
-      height: 30px;
-      background-color: #333;
-      .now{
-        background-color: $font-color;
-        height: 30px;
-      }
-    }
-  }
-}
-
-.charts{
-  width: 800px;
-  margin: 0 auto;
-  @include clearfix;
-
-  h2{
-    text-align: center;
-  }
-}
-
-.small-chart{
-  h3{
-    font-size: 20px;
-    text-align: center;
-  }
-  width: 300px;
-  margin: 10px 50px;
-  float: left;
-}
-
-.status{
-  width: 300px;
-  height: 20px;
-  background-color: #333;
-  .now{
-    background-color: $font-color;
-    height: 20px;
-  }
-}
-
-.our_data{
-  width: 800px;
-  margin: 20px auto;
-  @include clearfix;
-  h2{
-    text-align: center;
-  }
+  margin: 25px auto 10px auto;
 }
