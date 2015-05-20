@@ -26,6 +26,7 @@
 						<button class="normal-button">ログアウト</button>
 					</form>
 				</li>
+				<li class="header_user"><a href="/setting"><?= $user->name; ?></a></li>
 				<?php else: ?>
 					<li class="logout">
 						<a href="/signin" class="radius-button">ログイン</a>

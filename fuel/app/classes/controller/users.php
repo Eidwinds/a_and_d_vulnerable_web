@@ -24,6 +24,7 @@ class Controller_Users extends Controller_Base
 		// check login
 		if($this->user !== null)
 		{
+			$this->template->user = $this->user;
 			$this->template->is_signin = true;
 		}
 	}
@@ -49,5 +50,11 @@ class Controller_Users extends Controller_Base
 	{
 		$this->template->title = '会社概要';
 		$this->template->content = View::forge('company', $this->data);
+	}
+
+	public function action_404()
+	{
+		$this->template->title = 'ページが見つかりません';
+		$this->template->content = View::forge('404', $this->data);
 	}
 }
