@@ -30,6 +30,7 @@ class Controller_Setting extends Controller_Users
 				$this->user->prefecture_id = (int)Input::post("prefecture_id", 0);
 				$this->user->address = Input::post("address", null);
 				$this->user->zip_code = Input::post("zip_code", null);
+				$this->user->tel = Input::post("tel", null);
 				$this->user->save();
 			}
 		}
@@ -40,6 +41,7 @@ class Controller_Setting extends Controller_Users
 		$this->data["prefecture_id"] = $this->user["prefecture_id"];
 		$this->data["address"] = $this->user["address"];
 		$this->data["zip_code"] = $this->user["zip_code"];
+		$this->data["tel"] = $this->user["tel"];
 
 		$this->template->title = 'アカウント情報変更';
 		$this->template->content = View::forge('setting', $this->data);

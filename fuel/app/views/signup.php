@@ -36,5 +36,9 @@
 		<label for="address">住所:</label>
 		<input type="text" name="address" id="address" value="<?php if(isset($address)) echo $address; ?>">
 	</fieldset>
+	<fieldset>
+		<label for="tel">TEL:</label>
+		<input type="tel" name="tel" id="tel" value="<?php if(isset($tel)) echo $tel; ?>">
+	</fieldset>
 	<button type="submit" class="normal-button center">送信</button>
 </form>

@@ -59,6 +59,7 @@ class Controller_Admin_Users extends Controller_Admin
 				$user->name = Input::post("name", null);
 				$user->kana = Input::post("kana", null);
 				$user->prefecture_id = (int)Input::post("prefecture_id", 0);
+				$user->tel = Input::post("tel", null);
 				$user->address = Input::post("address", null);
 				$user->zip_code = Input::post("zip_code", null);
 				$user->save();
@@ -106,6 +107,7 @@ class Controller_Admin_Users extends Controller_Admin
 				$user->name = Input::post("name", null);
 				$user->kana = Input::post("kana", null);
 				$user->prefecture_id = (int)Input::post("prefecture_id", 0);
+				$user->tel = Input::post("tel", null);
 				$user->address = Input::post("address", null);
 				$user->zip_code = Input::post("zip_code", null);
 				$user->save();
@@ -118,6 +120,7 @@ class Controller_Admin_Users extends Controller_Admin
 		$this->data["group_id"] = $user["group_id"];
 		$this->data["name"] = $user["name"];
 		$this->data["kana"] = $user["kana"];
+		$this->data["tel"] = $user["tel"];
 		$this->data["prefecture_id"] = $user["prefecture_id"];
 		$this->data["address"] = $user["address"];
 		$this->data["zip_code"] = $user["zip_code"];

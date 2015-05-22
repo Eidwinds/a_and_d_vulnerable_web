@@ -27,6 +27,7 @@ class Controller_Signup extends Controller_Users
 				$user->prefecture_id = (int)Input::post("prefecture_id", 0);
 				$user->address = Input::post("address", null);
 				$user->zip_code = Input::post("zip_code", null);
+				$user->tel = Input::post("tel", null);
 				$user->save();
 
 				Response::redirect("/signin");
