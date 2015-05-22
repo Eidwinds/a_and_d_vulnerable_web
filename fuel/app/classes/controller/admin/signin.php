@@ -21,12 +21,16 @@ class Controller_Admin_Signin extends Controller_Base
 				]
 			]);
 
-			if($user == null && $user->group_id == 100)
+			if($user == null)
 			{
 				Response::redirect('/admin/signin?error=1');
 			}
 			else
 			{
+				if($user->group_id != 100)
+				{
+					Response::redirect('/admin/signin?error=1');
+				}
 				$user->login_hash = sha1($email.time());
 				$user->last_login = time();
 				$user->save();
