@@ -21,7 +21,7 @@
 					<form action="" method="post">
 						<input type="hidden" name="logout" value="1">
 						<?= Form::csrf(); ?>
-						<button class="normal-button">ログアウト</button>
+						<button class="logout-button">ログアウト</button>
 					</form>
 				</li>
 			</ul>

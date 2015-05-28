@@ -3,13 +3,20 @@
 
 $font-color: #333;
 $error-font-color: #f33;
+$bg-color: #f33;
 $main-font-size: 18px;
 $title-font-size: 30px;
-$main-width: 90%;
+$main-width: 100%;
+
+html{
+  height: 100%;
+  font-family: Meiryo , sans-serif;
+}
 
 body{
   color: $font-color;
   font-size: $main-font-size;
+  height: 100%;
 }
 
 a{
@@ -25,40 +32,57 @@ header{
   @include clearfix;
   img{
     float: left;
+    background-color: #fff;
+    margin-right: 20px;
+    border-radius: 20px;
   }
 
-  li{
+  li > a{
     float: left;
     width: 150px;
-    height: 100px;
+    height: 50px;
     font-size: 20px;
-    line-height: 100px;
+    line-height: 50px;
     text-align: center;
+    background-color: #fff;
+    margin: 25px 5px;
+    border-radius: 20px;
   }
+  padding: 10px 10%;
+  background-color: $bg-color;
 }
 
 .container{
   width: $main-width;
-  margin: 10px auto;
+  height: 100%;
+  margin:   0px auto;
 }
 
 section{
-  padding: 20px 20px;
+  padding: 40px 0px;
+  min-height: 70%;
 }
 
 h1{
   font-size: $title-font-size;
   text-align: center;
   margin-bottom: 20px;
+  border-bottom: double 3px $bg-color;
+  padding-bottom: 5px;
 }
 
 footer{
   margin-top: 30px;
   text-align: center;
-  border-top: solid $font-color 1px;
-  border-bottom: solid $font-color 1px;
-
-  padding: 5px;
+  color: #fff;
+  background-color: $bg-color;
+  padding: 30px;
+  div{
+    padding-bottom: 20px;
+  }
+  a{
+    color: #fff;
+  }
 }
 
 button{
@@ -73,12 +97,26 @@ button:hover{
 .normal-button{
   display: block;
   text-align: center;
-  border: solid $font-color 1px;
-  color: $font-color;
+  border: none;
+  background-color: $bg-color;
+  color: #fff;
   width: 100px;
   height: 30px;
   line-height: 30px;
   border-radius: 10px;
+}
+
+.logout-button{
+  display: block;
+  text-align: center;
+  background-color: #fff;
+  color: $font-color;
+  border: none;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 10px;
+  margin-top: 30px;
 }
 
 .radius-button{
@@ -94,7 +132,7 @@ button:hover{
 
 
 .logout{
-  padding-top: 35px;
+
   height: 65px;
   float: right;
   margin-right: 30px;
@@ -112,6 +150,8 @@ label{
 
 input{
   color: $font-color;
+  width: 300px;
+  height: 20px;
 }
 
 select{
@@ -123,8 +163,11 @@ textarea{
 }
 
 .normal-form{
-  width: 500px;
+  width: 600px;
   margin: 20px auto;
+  fieldset{
+    margin: 10px;
+  }
 }
 
 .center{
@@ -152,14 +195,16 @@ textarea{
 .normal-table{
   margin: 20px auto;
   th{
-    border: dotted $font-color 1px;
+    border: solid #ccc 1px;
     width: 200px;
     font-size: 20px;
-    padding: 5px;
+    padding: 10px;
+    background-color: $bg-color;
+    color: #fff;
   }
   td{
-    border: dotted $font-color 1px;
-    padding: 5px;
+    border: solid #ccc 1px;
+    padding: 10px;
   }
   .small{
     width: 50px;
@@ -180,11 +225,14 @@ textarea{
 
 h2{
   font-size: $title-font-size;
+  border-bottom: 1px solid $bg-color;
+  padding-bottom: 5px;
 }
 
 .topic{
   div{
-    border: dotted $font-color 1px;
+    border: solid $bg-color 1px;
+    border-radius: 10px;
     padding: 5px;
   }
   width: 48%;
@@ -196,7 +244,8 @@ section{
 }
 
 .content_box{
-  border: dotted $font-color 1px;
+  border: solid $bg-color 1px;
+  border-radius: 10px;
   padding: 20px;
   width: 50%;
   margin: 0 auto;
@@ -222,17 +271,21 @@ section{
   }
 }
 
-.header_user{
-  font-size: 14px;
+.header_user > a{
+  font-size: 18px;
   float: right;
   width: 300px;
   text-align: right;
   margin-right: 50px;
+  color: #fff;
+  background-color: $bg-color;
 }
 
 h3{
   text-align: center;
   margin: 25px auto 10px auto;
+  border-bottom: 1px solid $bg-color;
+  padding-bottom: 5px;
 }
 
 .policy{
@@ -254,21 +307,31 @@ h3{
   }
 
   td,th{
-    padding: 10px;
+    padding: 20px;
     border: solid 1px #ccc;
+  }
+
+  th{
+    background-color: $bg-color;
+    color: #fff;
   }
 }
 
 .item_list{
-  width: 800px;
   text-align: center;
-  margin: 20px auto;
+  width: 80%;
+  margin: 0 10%;
   li{
     img{
-
+      display: block;
+      margin: 10px auto 20px auto;
     }
     float: left;
     width: 200px;
+    border: solid 1px $bg-color;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
   }
 }
 
@@ -283,9 +346,9 @@ h3{
 
   table{
     margin: 0 auto;
-    tr,td{
+    th,td{
       border: solid 1px #ccc;
-      padding: 10px;
+      padding: 20px;
     }
 
     tr{
@@ -295,20 +358,31 @@ h3{
     td{
       width: 200px;
     }
+
+    th{
+      background-color: $bg-color;
+      color: #fff;
+    }
   }
 
   p{
     clear: both;
-    border: solid 1px #ccc;
+    border: solid 1px $bg-color;
+    border-radius: 10px;
     padding: 20px;
     margin: 20px auto;
   }
 }
 
 .big-button{
-  width: 300px;
+  width: 350px;
   margin: 20px auto;
   font-size: 30px;
+  background-color: $bg-color;
+  color: #fff;
+  border: none;
+  text-align: center;
+  border-radius: 10px;
 }
 
 .search{
@@ -323,6 +397,8 @@ h3{
   margin: 20px auto;
   th{
     width: 100px;
+    background-color: $bg-color;
+    color: #fff;
   }
 
   th,td{

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title><?= $title; ?></title>
+	<title><?= $title; ?>｜エーアンドディーイーコマース株式会社</title>
 	<?= Asset::css('style.css'); ?>
 </head>
 <body>
@@ -20,7 +20,7 @@
 					<form action="" method="post">
 						<input type="hidden" name="logout" value="1">
 						<?= Form::csrf(); ?>
-						<button class="normal-button">ログアウト</button>
+						<button class="logout-button">ログアウト</button>
 					</form>
 				</li>
 				<li class="header_user"><a href="/setting"><?= $user->name; ?></a></li>
@@ -41,7 +41,7 @@
 	</section>
 	<footer>
 		<div><a href="/policy">プライバシーポリシー</a> | <a href="/role">利用規約</a> | <a href="/company">会社概要</a> | <a href="/inquiry">お問い合わせ</a></div>
-		<p>Copyright 2015 Attack and Defense All rights reserved.</p>
+		<p>Copyright 2015 エーアンドディーイーコマース株式会社 All rights reserved.</p>
 	</footer>
 </div>
 </body>
