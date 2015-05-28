@@ -7,6 +7,9 @@ class Model_Purchase extends \Orm\Model
 		'user_id',
 		'item_id',
 		'number',
+		'status' => [
+			"default" => 0
+		],
 		'created_at',
 		'updated_at',
 	);

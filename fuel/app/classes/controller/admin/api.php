@@ -110,4 +110,21 @@ class Controller_Admin_Api extends Controller_Rest
 			$inquiry->safeDelete();
 		}
 	}
+
+	public function post_changepurchase()
+	{
+
+		$purchase = Model_Purchase::find((int)Input::post("id"), [
+		]);
+
+		if($purchase == null)
+		{
+			$this->response->set_status(400);
+		}
+		else
+		{
+			$purchase->status = Input::post("status", 0);
+			$purchase->save();
+		}
+	}
 }
