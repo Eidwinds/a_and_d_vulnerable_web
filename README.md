@@ -20,3 +20,9 @@ $ mv sample/*.png public/img/upload/
 ```
 
 then use sample/items.sql.
+
+## Create Admin User
+
+``` shell
+$ php oil r user:createAdmin [email] [password]
+```
