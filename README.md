@@ -14,3 +14,9 @@ $ composer install
 $ php oil r migrate
 ```
 
+## Using sample data
+``` shell
+$ mv sample/*.png public/img/upload/
+```
+
+then use sample/items.sql.
