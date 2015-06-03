@@ -179,7 +179,9 @@ return array(
 			'Fuel\\Core\\Response',
 			'Fuel\\Core\\View',
 			'Fuel\\Core\\ViewModel',
+			'Fuel\\Core\\ViewModel',
 			'Closure',
+			'Pagination'
 		),
 	),
 

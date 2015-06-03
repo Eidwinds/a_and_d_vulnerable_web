@@ -321,6 +321,7 @@ h3{
   text-align: center;
   width: 80%;
   margin: 0 10%;
+  @include clearfix;
   li{
     img{
       display: block;

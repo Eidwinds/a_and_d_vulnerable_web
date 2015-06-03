@@ -13,6 +13,6 @@
 				</a>
 			</li>
 		<?php endforeach; ?>
-		<?= $pager; ?>
 	</ul>
+	<?= $pager; ?>
 </div>
