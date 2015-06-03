@@ -19,7 +19,7 @@ $ php oil r migrate
 $ mv sample/*.png public/img/upload/
 ```
 
-then use sample/items.sql.
+then use sample/sample.sql.
 
 ## Create Admin User
 
