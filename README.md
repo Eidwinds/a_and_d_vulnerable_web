@@ -16,7 +16,7 @@ $ php oil r migrate
 
 ## Using sample data
 ``` shell
-$ mv sample/*.png public/img/upload/
+$ mv sample/*.png public/assets/img/upload/
 ```
 
 then use sample/sample.sql.
