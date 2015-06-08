@@ -2,11 +2,15 @@
 
 ## Required
 
-- PHP 5.5
+- PHP 5.4
+- MySQL
 - composer
 - compass
 
 ## Setup
+
+create database user and database.
+then modify fuel/app/config/db.php.
 
 ``` shell
 $ git clone --recursive git@github.com:Eidwinds/a_and_d_vulnerable_web.git
