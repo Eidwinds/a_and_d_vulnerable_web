@@ -1,4 +1,5 @@
-# Vulnerable Server
+# Vulnerable Web App for Attack and Defense
+This web app was used at https://attack-and-defense.doorkeeper.jp/events/24249.
 
 ## Required
 
