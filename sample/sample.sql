@@ -12,4 +12,4 @@ INSERT INTO `items` (`name`, `img_path`, `detail`, `price`, `stock`, `is_public`
 ('ティラミス', '11.png', 'たぶんティラミスです。\r\nアメリカ仕様なのできっと甘いです。', 2000, 1000, 1, 0, 1433299374, NULL),
 ('ハンバーガー', '12.png', 'アメリカサイズのハンバーガーです。\r\nかぶりつくのはしんどいです。', 2000, 1000, 1, 0, 1433299408, NULL);
 
-INSERT INTO `adweb`.`topics` (`title`, `body`, `deleted_at`, `created_at`, `updated_at`) VALUES ('サイトをオープンしました。', '本日サイトをオープンしました。\r\n様々なネタ商品を取り扱っていきますので。\r\nよろしくお願いいたします。\r\n代表　代表取締役社長　成重　成夫', '0', NULL, NULL);
+INSERT INTO `topics` (`title`, `body`, `deleted_at`, `created_at`, `updated_at`) VALUES ('サイトをオープンしました。', '本日サイトをオープンしました。\r\n様々なネタ商品を取り扱っていきますので。\r\nよろしくお願いいたします。\r\n代表　代表取締役社長　成重　成夫', '0', NULL, NULL);
