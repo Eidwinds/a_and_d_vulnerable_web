@@ -8,9 +8,9 @@
 return array(
 	'default' => array(
 		'connection'  => array(
-			'dsn'        => getenv('DB_DSN'),
-			'username'   => getenv('DB_USERNAME'),
-			'password'   => getenv('DB_PASSWORD')
+			'dsn'        => "mysql:host=localhost;dbname=adweb",
+			'username'   => "adweb",
+			'password'   => "adweb"
 		)
 	)
 );
