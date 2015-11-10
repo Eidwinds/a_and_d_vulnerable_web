@@ -34,7 +34,7 @@ class Controller_Topics extends Controller_Users
 
 		]);
 
-		$this->template->title = 'お知らせ一覧';
+		$this->template->title = __('topics');
 		$this->template->content = View::forge('topics/index', $this->data);
 	}
 
@@ -51,7 +51,7 @@ class Controller_Topics extends Controller_Users
 			Response::redirect(404);
 		}
 
-		$this->template->title = $this->data["topic"]->title . ' (' . date("Y-m-d", $this->data["topic"]->created_at) . ")";
+		$this->template->title = $this->data["topic"]->title . ' (' . date(__("date_style"), $this->data["topic"]->created_at) . ")";
 		$this->template->content = View::forge('topics/detail', $this->data);
 	}
 }

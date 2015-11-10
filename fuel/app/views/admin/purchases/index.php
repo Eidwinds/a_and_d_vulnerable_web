@@ -2,12 +2,12 @@
 	<table class="normal-table">
 		<tr>
 			<th class="small">ID</th>
-			<th>ユーザ名</th>
-			<th>商品名</th>
-			<th class="small">個数</th>
-			<th>小計</th>
-			<th>作成日</th>
-			<th>状態</th>
+			<th><?= __("user"); ?></th>
+			<th><?= __("name"); ?></th>
+			<th class="small"><?= __("number"); ?></th>
+			<th><?= __("total"); ?></th>
+			<th><?= __("created_datetime"); ?></th>
+			<th><?= __("status"); ?></th>
 		</tr>
 		<?php foreach($purchases as $purchase): ?>
 		<tr id="purchase_<?= $purchase->id; ?>">
@@ -16,13 +16,13 @@
 			<td><?= $purchase->item->name; ?></td>
 			<td><?= $purchase->number; ?></td>
 			<td>\<?= number_format($purchase->number * $purchase->item->price); ?></td>
-			<td><?= Date("Y-m-d H:i:s", $purchase->created_at); ?></td>
+			<td><?= Date(__("datetime_style"), $purchase->created_at); ?></td>
 			<td>
 				<select onchange="changeStatus(<?= $purchase->id; ?>)" id="status_<?= $purchase->id; ?>">
-					<option value="0" <?php if($purchase->status == 0) echo "selected"; ?>>受付待ち</option>
-					<option value="1" <?php if($purchase->status == 1) echo "selected"; ?>>受付済み</option>
-					<option value="2" <?php if($purchase->status == 2) echo "selected"; ?>>発送待ち</option>
-					<option value="3" <?php if($purchase->status == 3) echo "selected"; ?>>発送済み</option>
+					<option value="0" <?php if($purchase->status == 0) echo "selected"; ?>><?= __("wait_accepting"); ?></option>
+					<option value="1" <?php if($purchase->status == 1) echo "selected"; ?>><?= __("already_accepted"); ?></option>
+					<option value="2" <?php if($purchase->status == 2) echo "selected"; ?>><?= __("wait_shipping"); ?></option>
+					<option value="3" <?php if($purchase->status == 3) echo "selected"; ?>><?= __("already_shipped"); ?></option>
 				</select>
 			</td>
 		</tr>

@@ -53,30 +53,30 @@ class Controller_Users extends Controller_Base
 		]);
 
 
-		$this->template->title = 'トップページ';
+		$this->template->title = __('top');
 		$this->template->content = View::forge('index', $this->data);
 	}
 
 	public function action_role()
 	{
-		$this->template->title = '利用規約';
+		$this->template->title = __('term');
 		$this->template->content = View::forge('role', $this->data);
 	}
 
 	public function action_policy()
 	{
-		$this->template->title = 'プライバシーポリシー';
+		$this->template->title = __('policy');
 		$this->template->content = View::forge('policy', $this->data);
 	}
 	public function action_company()
 	{
-		$this->template->title = '会社概要';
+		$this->template->title = __('company');
 		$this->template->content = View::forge('company', $this->data);
 	}
 
 	public function action_404()
 	{
-		$this->template->title = 'ページが見つかりません';
+		$this->template->title = __('404');
 		$this->template->content = View::forge('404', $this->data);
 	}
 }

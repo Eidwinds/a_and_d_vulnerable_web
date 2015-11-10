@@ -27,7 +27,7 @@ class Controller_Admin_Purchases extends Controller_Admin
 
 		]);
 
-		$this->template->title = '購入履歴';
+		$this->template->title = __("history");
 		$this->template->content = View::forge('admin/purchases/index', $this->data);
 	}
 }

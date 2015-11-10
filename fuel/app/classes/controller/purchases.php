@@ -38,7 +38,7 @@ class Controller_Purchases extends Controller_Users
 
 		]);
 
-		$this->template->title = '購入履歴';
+		$this->template->title = __('history');
 		$this->template->content = View::forge('purchases/index', $this->data);
 	}
 }

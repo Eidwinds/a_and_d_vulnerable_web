@@ -34,7 +34,7 @@ class Controller_Items extends Controller_Users
 		$sql = "SELECT * FROM items WHERE deleted_at = 0 {$search} AND is_public = 1 ORDER BY id DESC LIMIT {$this->data["pager"]->offset},{$this->data["pager"]->per_page}";
 		$this->data["items"] = DB::query($sql)->execute()->as_Array();
 
-		$this->template->title = '商品一覧';
+		$this->template->title = __("items");
 		$this->template->content = View::forge('items/index', $this->data);
 	}
 

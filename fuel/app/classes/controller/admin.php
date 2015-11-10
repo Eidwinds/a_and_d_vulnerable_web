@@ -56,7 +56,7 @@ class Controller_Admin extends Controller_Base
 
 		]);
 
-		$this->template->title = 'ダッシュボード';
+		$this->template->title = __("dashboard");
 		$this->template->content = View::forge('admin/index', $this->data);
 	}
 }

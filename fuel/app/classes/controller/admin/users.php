@@ -33,7 +33,7 @@ class Controller_Admin_Users extends Controller_Admin
 
 		]);
 
-		$this->template->title = 'ユーザ';
+		$this->template->title = __("users");
 		$this->template->content = View::forge('admin/users/index', $this->data);
 	}
 
@@ -70,7 +70,7 @@ class Controller_Admin_Users extends Controller_Admin
 
 		$this->data = array_merge($this->data, Input::post());
 
-		$this->template->title = 'ユーザ作成';
+		$this->template->title = __("create");
 		$this->template->content = View::forge('admin/users/form', $this->data);
 	}
 
@@ -125,7 +125,7 @@ class Controller_Admin_Users extends Controller_Admin
 		$this->data["address"] = $user["address"];
 		$this->data["zip_code"] = $user["zip_code"];
 
-		$this->template->title = 'ユーザ更新';
+		$this->template->title = __("edit");
 		$this->template->content = View::forge('admin/users/form', $this->data);
 	}
 }

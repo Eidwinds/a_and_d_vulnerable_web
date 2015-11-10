@@ -2,16 +2,16 @@
 	<table class="normal-table">
 		<tr>
 			<th class="small">ID</th>
-			<th>タイトル</th>
-			<th>作成日</th>
+			<th><?= __("title"); ?></th>
+			<th><?= __("created_at"); ?></th>
 			<th></th>
 		</tr>
 		<?php foreach($inquiries as $inquiry): ?>
 		<tr id="inquiry_<?= $inquiry->id; ?>">
 			<td><?= $inquiry->id; ?></td>
 			<td><?= $inquiry->title; ?></td>
-			<td><?= Date("Y-m-d H:i:s", $inquiry->created_at); ?></td>
-			<td><button class="normal-button" onclick="deleteInquiry(<?= $inquiry->id; ?>)">削除</button></td>
+			<td><?= Date(__("datetime_style"), $inquiry->created_at); ?></td>
+			<td><button class="normal-button" onclick="deleteInquiry(<?= $inquiry->id; ?>)"><?= __("delete"); ?></button></td>
 		</tr>
 		<tr id="inquiry_body_<?= $inquiry->id; ?>">
 			<td colspan="4"><?= $inquiry->body; ?></td>
@@ -25,7 +25,7 @@
 <?= Security::js_fetch_token(); ?>
 <script>
 	function deleteInquiry(id){
-		if(confirm('消してよろしいですか？')){
+		if(confirm('<?= __("do_you_want_to_delete_it"); ?>')){
 			$.ajax({
 				url: '/admin/api/deleteinquiry.json',
 				type: 'POST',

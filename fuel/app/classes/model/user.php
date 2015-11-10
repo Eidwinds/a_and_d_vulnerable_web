@@ -57,11 +57,11 @@ class Model_User extends \Orm\Model
 	{
 		if((int)$this->group_id === 100)
 		{
-			return "管理者";
+			return "Admin";
 		}
 		else
 		{
-			return "ユーザ";
+			return "User";
 		}
 	}
 

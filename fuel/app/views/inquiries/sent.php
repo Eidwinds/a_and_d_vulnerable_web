@@ -1,1 +1,1 @@
-<p class="center">お問い合わせ頂きありがとうございました。</p>
+<p class="center"><?= __("inquiry_thanks"); ?></p>

@@ -34,7 +34,7 @@ class Controller_Cart extends Controller_Users
 
 		$this->data["user"] = $this->user;
 
-		$this->template->title = 'カート内一覧';
+		$this->template->title = __('cart');
 		$this->template->content = View::forge('carts/index', $this->data);
 	}
 
@@ -70,7 +70,7 @@ class Controller_Cart extends Controller_Users
 
 		$this->data["user"] = $this->user;
 
-		$this->template->title = '購入確認';
+		$this->template->title = __("confirm");
 		$this->template->content = View::forge('carts/confirm', $this->data);
 	}
 
@@ -114,7 +114,7 @@ class Controller_Cart extends Controller_Users
 
 		$this->data["user"] = $this->user;
 
-		$this->template->title = '購入完了';
+		$this->template->title = __("complete");
 		$this->template->content = View::forge('carts/sent', $this->data);
 	}
 }

@@ -36,7 +36,7 @@ class Controller_Signup extends Controller_Users
 
 		$this->data = array_merge($this->data, Input::post());
 
-		$this->template->title = 'ユーザ登録';
+		$this->template->title = __("signup");
 		$this->template->content = View::forge('signup', $this->data);
 	}
 }

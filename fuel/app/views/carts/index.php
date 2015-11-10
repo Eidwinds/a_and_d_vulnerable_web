@@ -2,10 +2,10 @@
 	<table class="normal-table">
 		<tr>
 			<th class="small">ID</th>
-			<th class="small">画像</th>
-			<th>名前</th>
-			<th class="small">在庫</th>
-			<th>値段</th>
+			<th class="small"><?= __("image"); ?></th>
+			<th><?= __("name"); ?></th>
+			<th class="small"><?= __("stock"); ?></th>
+			<th><?= __("price"); ?></th>
 			<th></th>
 		</tr>
 		<?php foreach($items as $item): ?>
@@ -15,16 +15,16 @@
 				<td><?= $item["name"]; ?></td>
 				<td><?= $item["stock"]; ?></td>
 				<td>\<?= number_format($item["price"]); ?></td>
-				<td><button class="normal-button" onclick="deleteItem(<?= $item["id"]; ?>)">削除</button></td>
+				<td><button class="normal-button" onclick="deleteItem(<?= $item["id"]; ?>)"><?= __("delete"); ?></button></td>
 			</tr>
 		<?php endforeach; ?>
 	</table>
 	<?php if($user != null): ?>
 		<?php if(count($items) != 0): ?>
-			<a href="/cart/confirm" class="radius-button center">購入へ進む</a>
+			<a href="/cart/confirm" class="radius-button center"><?= __("to_purchase"); ?></a>
 		<?php endif?>
 	<?php else: ?>
-		<a href="/signin" class="radius-button center">ログイン画面へ</a>
+		<a href="/signin" class="radius-button center"><?= __("to_signin"); ?></a>
 	<?php endif; ?>
 </div>
 
@@ -32,7 +32,7 @@
 <?= Asset::js("jquery.cookie.js"); ?>
 <script>
 	function deleteItem(id){
-		if(confirm('消してよろしいですか？')){
+		if(confirm('<?= __("do_you_want_to_delete_it"); ?>'){
 			var cartString = $.cookie("cart");
 			if(cartString == undefined){
 				var items = new Array();

@@ -5,7 +5,7 @@ class Controller_Inquiry extends Controller_Users
 
 	public function action_index()
 	{
-		$this->template->title = 'お問い合わせ';
+		$this->template->title = __("inquiry");
 
 		if(Input::post("name") != null)
 		{

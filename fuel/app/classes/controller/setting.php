@@ -43,7 +43,7 @@ class Controller_Setting extends Controller_Users
 		$this->data["zip_code"] = $this->user["zip_code"];
 		$this->data["tel"] = $this->user["tel"];
 
-		$this->template->title = 'アカウント情報変更';
+		$this->template->title = __('account_setting');
 		$this->template->content = View::forge('setting', $this->data);
 	}
 }

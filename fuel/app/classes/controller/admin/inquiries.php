@@ -33,7 +33,7 @@ class Controller_Admin_Inquiries extends Controller_Admin
 
 		]);
 
-		$this->template->title = 'お問い合わせ';
+		$this->template->title = __("inquiry");
 		$this->template->content = View::forge('admin/inquiries/index', $this->data);
 	}
 }

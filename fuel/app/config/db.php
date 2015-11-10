@@ -9,8 +9,8 @@ return array(
 	'default' => array(
 		'connection'  => array(
 			'dsn'        => "mysql:host=localhost;dbname=adweb",
-			'username'   => "adweb",
-			'password'   => "adweb"
+			'username'   => "root",
+			'password'   => "XVA9WYqhy3CJeyye"
 		)
 	)
 );

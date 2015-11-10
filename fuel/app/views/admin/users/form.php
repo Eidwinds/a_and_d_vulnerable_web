@@ -2,36 +2,36 @@
 	<?= Form::csrf(); ?>
 	<fieldset>
 		<?php if(isset($errors["email"])): ?>
-			<p class="error">このメールアドレスは既に使われています</p>
+			<p class="error"><?= __("email_already_used"); ?></p>
 		<?php endif; ?>
-		<label for="email">メールアドレス:</label>
+		<label for="email"><?= __("email"); ?>:</label>
 		<input type="email" required="" name="email" id="email" value="<?php if(isset($email)) echo $email; ?>">
 	</fieldset>
 	<fieldset>
-		<label for="password">パスワード:</label>
+		<label for="password"><?= __("password"); ?>:</label>
 		<input type="password" name="password" id="password" value="">
 	</fieldset>
 	<fieldset>
-	<label for="group_id">権限:</label>
+	<label for="group_id"><?= __("group"); ?>:</label>
 		<select name="group_id" id="group_id">
-			<option value="1" <?php if(isset($group_id) && $group_id == 1) echo " selected"; ?>>ユーザ</option>
-			<option value="100" <?php if(isset($group_id) && $group_id == 100) echo " selected"; ?>>管理者</option>
+			<option value="1" <?php if(isset($group_id) && $group_id == 1) echo " selected"; ?>><?= __("user"); ?></option>
+			<option value="100" <?php if(isset($group_id) && $group_id == 100) echo " selected"; ?>><?= __("admin"); ?></option>
 		</select>
 	</fieldset>
 	<fieldset>
-		<label for="name">名前:</label>
+		<label for="name"><?= __("name"); ?>:</label>
 		<input type="text" name="name" id="name" value="<?php if(isset($name)) echo $name; ?>">
 	</fieldset>
 	<fieldset>
-		<label for="kana">カナ:</label>
+		<label for="kana"><?= __("kana"); ?>:</label>
 		<input type="text" name="kana" id="kana" value="<?php if(isset($kana)) echo $kana; ?>">
 	</fieldset>
 	<fieldset>
-		<label for="zip_code">郵便番号:</label>
+		<label for="zip_code"><?= __("zip_code"); ?>:</label>
 		<input type="text" name="zip_code" id="zip_code" value="<?php if(isset($zip_code)) echo $zip_code; ?>">
 	</fieldset>
 	<fieldset>
-		<label for="prefecture_id">都道府県:</label>
+		<label for="prefecture_id"><?= __("prefecture"); ?>:</label>
 		<select name="prefecture_id" id="prefecture_id">
 			<?php $i = 0; foreach($prefectures as $prefecture): ?>
 				<option value="<?= $i; ?>" <?php if(isset($prefecture_id) && $prefecture_id == $i++) echo " selected"; ?>><?= $prefecture; ?></option>
@@ -39,12 +39,12 @@
 		</select>
 	</fieldset>
 	<fieldset>
-		<label for="address">住所:</label>
+		<label for="address"><?= __("address"); ?>:</label>
 		<input type="text" name="address" id="address" value="<?php if(isset($address)) echo $address; ?>">
 	</fieldset>
 	<fieldset>
 		<label for="tel">TEL:</label>
 		<input type="text" name="tel" id="tel" value="<?php if(isset($tel)) echo $tel; ?>">
 	</fieldset>
-	<button type="submit" class="normal-button center">確定</button>
+	<button type="submit" class="normal-button center"><?= __("submit"); ?></button>
 </form>

@@ -1,1 +1,1 @@
-<p class="center">お探しのページが見つかりませんでした。</p>
+<p class="center"><?= __('404_text'); ?></p>

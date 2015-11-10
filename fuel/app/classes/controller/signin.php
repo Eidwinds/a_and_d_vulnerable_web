@@ -38,7 +38,7 @@ class Controller_Signin extends Controller_Users
 
 	public function action_index()
 	{
-		$this->template->title = 'ログイン';
+		$this->template->title = __('signin');
 		$this->template->content = View::forge('signin');
 	}
 }

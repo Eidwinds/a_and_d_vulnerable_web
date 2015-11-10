@@ -1,1 +1,1 @@
-<p class="center">お買い上げありがとうございました。</p>
+<p class="center"><?= __("thanks"); ?></p>

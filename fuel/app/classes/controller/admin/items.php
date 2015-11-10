@@ -33,7 +33,7 @@ class Controller_Admin_Items extends Controller_Admin
 
 		]);
 
-		$this->template->title = '商品';
+		$this->template->title = __("items");
 		$this->template->content = View::forge('admin/items/index', $this->data);
 	}
 
@@ -72,7 +72,7 @@ class Controller_Admin_Items extends Controller_Admin
 
 		$this->data = array_merge($this->data, Input::post());
 
-		$this->template->title = '商品　作成';
+		$this->template->title = __("create");
 		$this->template->content = View::forge('admin/items/form', $this->data);
 	}
 
@@ -126,7 +126,7 @@ class Controller_Admin_Items extends Controller_Admin
 		$this->data["is_public"] = $item["is_public"];
 		$this->data["img_path"] = $item["img_path"];
 
-		$this->template->title = '商品　編集';
+		$this->template->title = __("edit");
 		$this->template->content = View::forge('admin/items/form', $this->data);
 	}
 }

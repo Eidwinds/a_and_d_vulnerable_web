@@ -1,10 +1,10 @@
-<a class="create_button" href="/admin/topics/create">お知らせを作る</a>
+<a class="create_button" href="/admin/topics/create"><?= __("create"); ?></a>
 <div>
 	<table class="normal-table">
 		<tr>
 			<th>ID</th>
-			<th>タイトル</th>
-			<th>作成日</th>
+			<th><?= __("title"); ?></th>
+			<th><?= __("created_datetime"); ?></th>
 			<th></th>
 			<th></th>
 		</tr>
@@ -12,9 +12,9 @@
 		<tr id="topic_<?= $topic->id; ?>">
 			<td><?= $topic->id; ?></td>
 			<td><?= $topic->title; ?></td>
-			<td><?= Date("Y-m-d H:i:s", $topic->created_at); ?></td>
-			<td><a class="normal-button" href="/admin/topics/update/<?= $topic->id; ?>">編集</a></td>
-			<td><button class="normal-button" onclick="deleteTopic(<?= $topic->id; ?>)">削除</button></td>
+			<td><?= Date(__("datetime_style"), $topic->created_at); ?></td>
+			<td><a class="normal-button" href="/admin/topics/update/<?= $topic->id; ?>"><?= __("edit"); ?></a></td>
+			<td><button class="normal-button" onclick="deleteTopic(<?= $topic->id; ?>)"><?= __("delete"); ?></button></td>
 		</tr>
 		<?php endforeach; ?>
 	</table>
@@ -25,7 +25,7 @@
 <?= Security::js_fetch_token(); ?>
 <script>
 	function deleteTopic(id){
-		if(confirm('消してよろしいですか？')){
+		if(confirm('<?= __("do_you_want_to_delete_it"); ?>')){
 			$.ajax({
 				url: '/admin/api/deletetopic.json',
 				type: 'POST',

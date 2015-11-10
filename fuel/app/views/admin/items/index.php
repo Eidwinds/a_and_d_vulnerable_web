@@ -1,13 +1,13 @@
-<a class="create_button" href="/admin/items/create">商品を作る</a>
+<a class="create_button" href="/admin/items/create"><?= __("create"); ?></a>
 <div>
 	<table class="normal-table">
 		<tr>
-			<th class="small">公開</th>
+			<th class="small"><?= __("public"); ?></th>
 			<th class="small">ID</th>
-			<th>名前</th>
-			<th>在庫</th>
-			<th>値段</th>
-			<th>作成日</th>
+			<th><?= __("name"); ?></th>
+			<th><?= __("stock"); ?></th>
+			<th><?= __("price"); ?></th>
+			<th><?= __("created_datetime"); ?></th>
 			<th></th>
 			<th></th>
 		</tr>
@@ -18,9 +18,9 @@
 			<td><?= $item->name; ?></td>
 			<td><?= $item->stock; ?></td>
 			<td>\<?= number_format($item->price); ?></td>
-			<td><?= Date("Y-m-d H:i:s", $item->created_at); ?></td>
-			<td><a class="normal-button" href="/admin/items/update/<?= $item->id; ?>">編集</a></td>
-			<td><button class="normal-button" onclick="deleteTopic(<?= $item->id; ?>)">削除</button></td>
+			<td><?= Date(__("datetime_style"), $item->created_at); ?></td>
+			<td><a class="normal-button" href="/admin/items/update/<?= $item->id; ?>"><?= __("edit"); ?></a></td>
+			<td><button class="normal-button" onclick="deleteTopic(<?= $item->id; ?>)"><?= __("delete"); ?></button></td>
 		</tr>
 		<?php endforeach; ?>
 	</table>
@@ -31,7 +31,7 @@
 <?= Security::js_fetch_token(); ?>
 <script>
 	function deleteTopic(id){
-		if(confirm('消してよろしいですか？')){
+		if(confirm('<?= __("do_you_want_to_delete_it"); ?>')){
 			$.ajax({
 				url: '/admin/api/deleteitem.json',
 				type: 'POST',

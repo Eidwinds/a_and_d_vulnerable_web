@@ -10,7 +10,8 @@ class Controller_Base extends Controller_Template
 	public function before()
 	{
 		parent::before();
-
 		$this->template->is_signin = false;
+
+
 	}
 }

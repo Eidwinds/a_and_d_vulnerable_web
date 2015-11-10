@@ -1,5 +1,5 @@
 <?php if((int)Input::get("error", 0) === 1): ?>
-<p class="error">メールアドレスかパスワードが違います。</p>
+<p class="error"><?= __("signin_failed"); ?></p>
 <?php endif; ?>
 <form method="post" action="" class="normal-form">
 	<?= Form::csrf(); ?>
