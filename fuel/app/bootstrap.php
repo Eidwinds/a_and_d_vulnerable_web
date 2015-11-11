@@ -24,13 +24,17 @@ Fuel::$env = (isset($_SERVER['FUEL_ENV']) ? $_SERVER['FUEL_ENV'] : Fuel::DEVELOP
 // Initialize the framework with the config file.
 Fuel::init('config.php');
 
-$languages = explode(',', $_SERVER['HTTP_ACCEPT_LANGUAGE']);
-if(isset($languages[0]) && preg_match('/^en/i', $languages[0]))
+
+if(isset($_SERVER['HTTP_ACCEPT_LANGUAGE']))
 {
-	Config::set('language', 'en');
-}
-else
-{
-	Config::set('language', 'ja');
+	$languages = explode(',', $_SERVER['HTTP_ACCEPT_LANGUAGE']);
+	if(isset($languages[0]) && preg_match('/^en/i', $languages[0]))
+	{
+		Config::set('language', 'en');
+	}
+	else
+	{
+		Config::set('language', 'ja');
+	}
 }
 Lang::load('main');
